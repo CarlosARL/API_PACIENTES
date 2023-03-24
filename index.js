@@ -13,7 +13,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const pacienteSchema = new mongoose.Schema({
   nome: String,
-  data_nascimento: Date,
+  data_nascimento: String,
   sexo: String,
   endereco: {
     rua: String,
@@ -21,7 +21,7 @@ const pacienteSchema = new mongoose.Schema({
     complemento: String,
     bairro: String,
     cidade: String,
-    estado: String,
+    estado: String, 
     cep: String,
   },
   contato: {
@@ -31,26 +31,18 @@ const pacienteSchema = new mongoose.Schema({
   },
   diagnostico: String,
   cuidados: [String],
-  medicamentos: [{
-    nome: String,
-    dose: String,
-    frequencia: String,
-    horarios: [String],
-  }],
+  medicamentos: [String],
   historico_medico: [{
-    data: Date,
     descricao: String,
   }],
   monitoramento: {
     sinais_vitais: {
-      data: Date,
       temperatura: Number,
       frequencia_cardiaca: Number,
       pressao_arterial: String,
       oximetria: Number,
     },
     atividades: [{
-      data: Date,
       descricao: String,
       observacao: String,
     }],
