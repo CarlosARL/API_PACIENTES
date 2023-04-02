@@ -37,15 +37,9 @@ const pacienteSchema = new mongoose.Schema({
   }],
   monitoramento: {
     sinais_vitais: {
-      temperatura: Number,
       frequencia_cardiaca: Number,
-      pressao_arterial: String,
       oximetria: Number,
     },
-    atividades: [{
-      descricao: String,
-      observacao: String,
-    }],
   },
 });
 
