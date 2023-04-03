@@ -32,9 +32,9 @@ const pacienteSchema = new mongoose.Schema({
   diagnostico: String,
   cuidados: [String],
   medicamentos: [String],
-  historico_medico: [{
+  historico_medico: {
     descricao: String,
-  }],
+  },
   monitoramento: {
     sinais_vitais: {
       frequencia_cardiaca: Number,
